@@ -17,8 +17,10 @@ wss.on('connection', (ws) => {
                 console.log(`Updating task state: ${task.id}, checked: ${task.checked}`);
             } else if (task.action === 'delete') {
                 console.log(`Deleting task: ${task.id}`);
-            } else if (task.action === 'reorder') {
-                console.log(`Reordering task: ${task.id}`);
+            } else if (task.action === 'drag') {
+                //console.log(`Dragging element with ID: ${task.id} to position ( ${task.posY})`);
+            } else if (task.action === 'draggingEnded') {
+                console.log('Dragging ended');
             }
 
             wss.clients.forEach((client) => {

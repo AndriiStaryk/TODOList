@@ -90,6 +90,7 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    width: 100%;
     line-height: 24px;
     background: #f9f9f9;
     margin-bottom: 10px;
